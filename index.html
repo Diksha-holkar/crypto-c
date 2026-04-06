@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Easy Crypto Challenge</title>
+    <title>Crypto Challenge</title>
 
     <style>
         body {
@@ -20,7 +20,7 @@
             display: inline-block;
         }
 
-        input {
+        input, select {
             padding: 10px;
             width: 250px;
             margin-top: 15px;
@@ -38,7 +38,11 @@
             cursor: pointer;
         }
 
-        #result {
+        button:hover {
+            background-color: #16a34a;
+        }
+
+        #result, #hintResult {
             margin-top: 15px;
             font-weight: bold;
         }
@@ -49,7 +53,7 @@
 
 <div class="box">
 
-    <h2>🔐 Easy Crypto Challenge</h2>
+    <h2>🔐 Crypto Challenge</h2>
 
     <p>Decode this message:</p>
 
@@ -57,8 +61,7 @@
         cml0Q1RGe2Vhc3lfZmxhZ30=
     </h3>
 
-    <p>💡 Hint: It's Base64</p>
-
+    <!-- FLAG INPUT -->
     <input type="text" id="flagInput" placeholder="Enter your flag">
 
     <br>
@@ -66,6 +69,24 @@
     <button onclick="checkFlag()">Submit</button>
 
     <p id="result"></p>
+
+    <hr>
+
+    <!-- HINT SECTION -->
+    <p>Need a hint? Choose wisely 👇</p>
+
+    <select id="hintSelect">
+        <option value="">Select a hint</option>
+        <option value="wrong1">This is encrypted with AES</option>
+        <option value="wrong2">Try brute force</option>
+        <option value="correct">This is a common encoding format</option>
+    </select>
+
+    <br>
+
+    <button onclick="showHint()">Get Hint</button>
+
+    <p id="hintResult"></p>
 
 </div>
 
