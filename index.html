@@ -2,27 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Crypto Challenge</title>
+    <title>Easy Crypto Challenge</title>
 
     <style>
         body {
+            background-color: #0f172a;
+            color: white;
             font-family: Arial;
             text-align: center;
             margin-top: 100px;
-            background-color: #0f172a;
-            color: white;
+        }
+
+        .box {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
         }
 
         input {
             padding: 10px;
             width: 250px;
+            margin-top: 15px;
             border-radius: 5px;
             border: none;
         }
 
         button {
             padding: 10px 20px;
-            margin-left: 10px;
+            margin-top: 10px;
             border: none;
             background-color: #22c55e;
             color: white;
@@ -30,12 +38,8 @@
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #16a34a;
-        }
-
         #result {
-            margin-top: 20px;
+            margin-top: 15px;
             font-weight: bold;
         }
     </style>
@@ -43,18 +47,29 @@
 
 <body>
 
-    <h1>🔐 Crypto Challenge</h1>
+<div class="box">
 
-    <p>Nothing seems visible here... 👀</p>
+    <h2>🔐 Easy Crypto Challenge</h2>
 
-    <p>💡 Hint: Check the browser console</p>
+    <p>Decode this message:</p>
 
-    <input type="text" id="flagInput" placeholder="Enter flag here">
+    <h3>
+        cml0Q1RGe2Vhc3lfZmxhZ30=
+    </h3>
+
+    <p>💡 Hint: It's Base64</p>
+
+    <input type="text" id="flagInput" placeholder="Enter your flag">
+
+    <br>
+
     <button onclick="checkFlag()">Submit</button>
 
     <p id="result"></p>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
