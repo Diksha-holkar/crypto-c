@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Challenge</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #0f172a;
+            color: white;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            background-color: #22c55e;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #16a34a;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🔐 Crypto Challenge</h1>
+
+    <p>Nothing seems visible here... 👀</p>
+
+    <p>💡 Hint: Check the browser console</p>
+
+    <input type="text" id="flagInput" placeholder="Enter flag here">
+    <button onclick="checkFlag()">Submit</button>
+
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
