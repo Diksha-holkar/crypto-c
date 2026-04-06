@@ -1,7 +1,7 @@
 function checkFlag() {
-    let userInput = document.getElementById("flagInput").value.trim();
+    let userInput = document.getElementById("flagInput").value.trim().toLowerCase();
 
-    let correctFlag = "ritCTF{easy_flag}";
+    let correctFlag = "ritctf{easy_flag}";
 
     if (userInput === correctFlag) {
         document.getElementById("result").innerHTML = "✅ Correct!";
@@ -11,3 +11,4 @@ function checkFlag() {
         document.getElementById("result").style.color = "red";
     }
 }
+
